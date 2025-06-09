@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="todo.css" />
+  <style>
+    /* Layout wrapper for button + container */
+    .page-wrapper {
+      display: flex;
+      align-items: flex-start; /* Align top edges */
+      gap: 20px; /* space between button and container */
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    /* Back to Home button styles */
+    .back-to-home button {
+      padding: 10px 20px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-to-home button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="back-to-home">
+      <a href="index.html" style="text-decoration: none;">
+        <button>
+          ⬅️ Back to Home
+        </button>
+      </a>
+    </div>
+
+    <div class="todo-container">
+      <h2>My To-Do List</h2>
+      <input type="text" id="taskInput" placeholder="Add a new task..." />
+      <button onclick="addTask()">Add Task</button>
+      <ul id="taskList"></ul>
+    </div>
+  </div>
+
+  <script src="todo.js"></script>
+</body>
+</html>
